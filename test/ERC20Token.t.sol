@@ -4,8 +4,8 @@ pragma solidity ^0.8.17;
 import "forge-std/Test.sol";
 import "../src/ERC20Token.sol";
 
-contract ERC20TokenTest is DSTest {
-    ERC20Token erc20token;
+contract ERC20TokenTest is Test {
+    ERC20Token private erc20token;
     address private constant ACCOUNT1 = address(0x1111111111111111111111111111111111111111);
 
     function setUp() public {
