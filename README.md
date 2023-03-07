@@ -1,4 +1,4 @@
-#  Create Tokens w/Foundry & Token Standards Overview
+#  Smart Contracts w/Foundry & Token Standards Overview
 
 <add_image>
 
