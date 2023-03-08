@@ -1,6 +1,8 @@
-#  Smart Contracts Development w/Foundry & Overview of Token Standards (ERC-20, ERC-721, and ERC-1155)
+#  Smart Contract Development with Foundry and Token Standards
 
 Foundry is a toolkit for Ethereum application development written in Rust. It's a framework for testing, debugging and deploying Solidity smart contracts.
+
+This repo is for following blog post: <here>
 
 ---
 
