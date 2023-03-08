@@ -12,8 +12,8 @@ contract ERC721NFT is ERC721, Ownable {
         _mint(msg.sender, 1);
     }
 
-    // Override the tokenURI function to return the custom URI for your contract
-    function tokenURI() public view override returns (string memory) {
+    // tokenURI function to return the custom URI for your contract
+    function tokenURI() public pure returns (string memory) {
         return "https://www.jsonkeeper.com/b/75N9";
     }
 
