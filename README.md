@@ -1,6 +1,6 @@
 #  Smart Contract Development with Foundry and Token Standards
 
-This repo is for the following blog post: <here>
+This repo is for the following blog post: [here](https://twitter.com/edatweets_/status/1633582752258818048)
 
 ---
 
