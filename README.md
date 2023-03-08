@@ -18,14 +18,15 @@ cd smart-contracts-overview-foundry
 forge install
 ```
 
-Set your environmental variables:
-```
-export RPC_URL=https://opt-mainnet.g.alchemy.com/v2/<YOUR_API_KEY>
-export PRIVATE_KEY=<YOUR_PRIVATE_KEY>
-export ETHERSCAN_API_KEY=<YOUR_ETHERSCAN_API_KEY>
-```
-
 To build, use `forge build`
+
+```
+$ forge build
+[⠆] Compiling...
+[⠒] Compiling 44 files with 0.8.17
+[⠃] Solc 0.8.17 finished in 4.41s
+Compiler run successful
+```
 
 Run the tests: `forge test`
 ```
@@ -98,7 +99,12 @@ You can get gas reports by running: `forge test --gas-report`
 ╰──────────────────────────────────────┴─────────────────┴───────┴────────┴───────┴─────────╯
 ```
 
-Deploy the smart contract: `forge create` [options] contract
+To deploy the smart contract use `forge create` [options] contract. You'll need to set your environmental variables:
+```
+export RPC_URL=https://opt-mainnet.g.alchemy.com/v2/<YOUR_API_KEY>
+export PRIVATE_KEY=<YOUR_PRIVATE_KEY>
+export ETHERSCAN_API_KEY=<YOUR_ETHERSCAN_API_KEY>
+```
 
 
 ---
