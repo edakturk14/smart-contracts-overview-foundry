@@ -1,38 +1,26 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.4;
+pragma solidity ^0.8.11;
 
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
-import "openzeppelin-contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-/**
- * @title ERC1155NFT
- * @dev This contract implements the ERC1155 token standard for non-fungible tokens (NFTs).
- * It allows for the creation and management of two types of tokens:
- * - TOKEN: A fungible token with ID 1 that can be minted and burned by the contract owner.
- * - NFT: A non-fungible token with ID 2 that can only be minted and burned by the contract owner.
- * The contract inherits from the ERC1155 and Ownable contracts.
- */
-contract ERC1155NFT is ERC1155, Ownable {
-    uint256 public constant TOKEN = 1;
-    uint256 public constant NFT = 2;
+contract MyERC1155 is ERC1155, Ownable {
+    uint256 public constant NFT_ID = 1;
+    uint256 public constant TOKEN_ID = 2;
+    mapping (address => bool) private _nftMinted;
 
-    constructor() ERC1155("https://www.jsonkeeper.com/b/75N9") {
-        _mint(msg.sender, TOKEN, 100, "");
+    constructor() ERC1155("https://gateway.pinata.cloud/ipfs/QmTWkZ46JY8MmqRh9jL4VeppQuHcCrap1hLVEaNJawAzWV/{id}.json") {}
+
+    function mint(address account, uint256 id, uint256 amount, bytes memory data) public onlyOwner {
+        _mint(account, id, amount, data);
     }
 
-    function mintNFT(address account) external onlyOwner {
-        _mint(account, NFT, 1, "");
+    function mintNFT(address account, bytes memory data) public onlyOwner {
+        require(!_nftMinted[account], "NFT already minted");
+        _nftMinted[account] = true;
+        mint(account, NFT_ID, 1, data);
     }
 
-    function burnNFT(address account) external onlyOwner {
-        _burn(account, NFT, 1);
-    }
-
-    function getNFTId() public pure returns (uint256) {
-        return NFT;
-    }
-    function getTokenId() public pure returns (uint256) {
-        return TOKEN;
+    function mintToken(address account, uint256 amount, bytes memory data) public onlyOwner {
+        mint(account, TOKEN_ID, amount, data);
     }
 }
-
