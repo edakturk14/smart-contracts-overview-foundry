@@ -13,8 +13,8 @@ Follow the steps [here](https://book.getfoundry.sh/getting-started/installation)
 Clone the repo & install the dependencies.
 
 ```
-git clone https://github.com/abigger87/femplate
-cd femplate
+git clone https://github.com/edakturk14/smart-contracts-overview-foundry.git
+cd smart-contracts-overview-foundry
 forge install
 ```
 
