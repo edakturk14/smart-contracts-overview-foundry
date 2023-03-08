@@ -1,13 +1,25 @@
-#  Smart Contracts w/Foundry & Token Standards Overview
+#  Smart Contracts Development w/Foundry & Overview of Token Standards (ERC-20, ERC-721, and ERC-1155)
 
-<add_image>
-
-This repo is an overview for the blog post: <ADD_LINK>
+Foundry is a toolkit for Ethereum application development written in Rust. It's a framework for testing, debugging and deploying Solidity smart contracts.
 
 ---
 
 ## Quickstart
 
+Follow the steps [here](https://book.getfoundry.sh/getting-started/installation) to install Foundry.
+
+Clone the repo & install the dependencies
+
+Set your enviornmental variables:
+```
+export RPC_URL=https://opt-mainnet.g.alchemy.com/v2/<YOUR_API_KEY>
+export PRIVATE_KEY=<YOUR_PRIVATE_KEY>
+export ETHERSCAN_API_KEY=<YOUR_ETHERSCAN_API_KEY>
+```
+
+- Deploy the smaart contarct: `forge create` [options] contract
+- Run the tests: `forge test`
+- You can get gas reports by running: `forge test --gas-report`
 
 ---
 
