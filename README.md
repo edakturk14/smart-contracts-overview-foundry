@@ -1,7 +1,5 @@
 #  Smart Contract Development with Foundry and Token Standards
 
-Foundry is a toolkit for Ethereum application development written in Rust. It's a framework for testing, debugging and deploying Solidity smart contracts.
-
 This repo is for the following blog post: <here>
 
 ---
@@ -106,6 +104,7 @@ export PRIVATE_KEY=<YOUR_PRIVATE_KEY>
 export ETHERSCAN_API_KEY=<YOUR_ETHERSCAN_API_KEY>
 ```
 
+👉 Checkout [Foundry book](https://book.getfoundry.sh/) for more.
 
 ---
 
