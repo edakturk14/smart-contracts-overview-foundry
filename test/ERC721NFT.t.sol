@@ -17,7 +17,8 @@ contract ERC721NFTTest is Test {
 
     function testTokenURI() public {
         erc721 = new ERC721NFT();
-        string memory uri = erc721.tokenURI(1);
+        erc721.mint(alice, 0);
+        string memory uri = erc721.tokenURI(0);
         assertEq(uri, "https://www.jsonkeeper.com/b/75N9", "URI should match expected value");
     }
 }
